@@ -3,141 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Clone</title>
-    <link rel="stylesheet" href="youtube.css">
+    <title>Simple Tube</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #141414;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        /* TOP BAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #202020;
+        }
+
+        .logo {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .search-box input {
+            background-color: #121212;
+            color: white;
+            border: 1px solid #303030;
+            padding: 8px 15px;
+            border-radius: 20px;
+            width: 300px;
+        }
+
+        .profile {
+            background-color: #0088cc;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #212121;
+            height: calc(100vh - 55px);
+            padding-top: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #383838;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* VIDEO GRID */
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-card {
+            width: 280px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .thumbnail {
+            width: 100%;
+            border-radius: 8px;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .video-title {
+            font-size: 14px;
+            margin: 8px 0 4px 0;
+            font-weight: bold;
+        }
+
+        .video-meta {
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="header-left">
-            <i class="fa-solid fa-bars menu-icon"></i>
-            <div class="logo-container">
-                <i class="fa-brands fa-youtube logo-icon"></i>
-                <span class="logo-text">YouTube</span>
-            </div>
+    <nav class="navbar">
+        <a href="#" class="logo"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        <div class="search-box">
+            <input type="text" placeholder="Search">
         </div>
+        <div class="profile">U</div>
+    </nav>
+
+    <div class="container">
         
-        <div class="header-center">
-            <form class="search-form">
-                <input type="text" placeholder="Search" class="search-bar">
-                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <button class="mic-btn"><i class="fa-solid fa-microphone"></i></button>
-        </div>
-
-        <div class="header-right">
-            <i class="fa-solid fa-video video-icon"></i>
-            <i class="fa-solid fa-bell bell-icon"></i>
-            <div class="user-avatar"></div>
-        </div>
-    </header>
-
-    <div class="main-body">
         <aside class="sidebar">
-            <div class="sidebar-item active">
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
-            </div>
-            <div class="sidebar-item">
-                <i class="fa-solid fa-bolt"></i>
-                <span>Shorts</span>
-            </div>
-            <div class="sidebar-item">
-                <i class="fa-solid fa-layer-group"></i>
-                <span>Subscriptions</span>
-            </div>
-            <hr>
-            <div class="sidebar-item">
-                <i class="fa-solid fa-video-slash"></i>
-                <span>Library</span>
-            </div>
-            <div class="sidebar-item">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <span>History</span>
-            </div>
-            <div class="sidebar-item">
-                <i class="fa-solid fa-clock"></i>
-                <span>Watch Later</span>
-            </div>
-            <div class="sidebar-item">
-                <i class="fa-solid fa-thumbs-up"></i>
-                <span>Liked Videos</span>
-            </div>
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#"><i class="fa-solid fa-bolt"></i> Shorts</a>
+            <a href="#"><i class="fa-solid fa-layer-group"></i> Subs</a>
         </aside>
 
-        <main class="content">
-            <div class="tags-container">
-                <span class="tag active">All</span>
-                <span class="tag">Gaming</span>
-                <span class="tag">Music</span>
-                <span class="tag">Live</span>
-                <span class="tag">Coding</span>
-                <span class="tag">Podcasts</span>
-                <span class="tag">Tech</span>
-            </div>
-
+        <main class="main-content">
             <div class="video-grid">
                 
-                <div class="video-card">
-                    <div class="thumbnail-container">
-                        <img src="https://via.placeholder.com/360x200/1e1e1e/ffffff?text=Video+Thumbnail" alt="Thumbnail" class="thumbnail">
-                        <span class="duration">12:45</span>
-                    </div>
-                    <div class="video-details">
-                        <div class="channel-avatar"></div>
-                        <div class="video-text">
-                            <h3 class="video-title">Learn HTML & CSS Full Course for Beginners</h3>
-                            <p class="channel-name">Code Academy</p>
-                            <p class="video-stats">1.2M views • 2 days ago</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="video-card">
+                    <img src="https://picsum.photos/seed/1/300/200" class="thumbnail" alt="Thumb">
+                    <div class="video-title">Coding for Beginners</div>
+                    <div class="video-meta">CodeAcademy • 10K views</div>
+                </a>
 
-                <div class="video-card">
-                    <div class="thumbnail-container">
-                        <img src="https://via.placeholder.com/360x200/1e1e1e/ffffff?text=Video+Thumbnail" alt="Thumbnail" class="thumbnail">
-                        <span class="duration">8:20</span>
-                    </div>
-                    <div class="video-details">
-                        <div class="channel-avatar"></div>
-                        <div class="video-text">
-                            <h3 class="video-title">Build a Responsive Website From Scratch</h3>
-                            <p class="channel-name">Web Dev Pro</p>
-                            <p class="video-stats">450K views • 1 week ago</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="video-card">
+                    <img src="https://picsum.photos/seed/2/300/200" class="thumbnail" alt="Thumb">
+                    <div class="video-title">Lofi Beats to Study</div>
+                    <div class="video-meta">Chill Tracks • 2M views</div>
+                </a>
 
-                <div class="video-card">
-                    <div class="thumbnail-container">
-                        <img src="https://via.placeholder.com/360x200/1e1e1e/ffffff?text=Video+Thumbnail" alt="Thumbnail" class="thumbnail">
-                        <span class="duration">22:15</span>
-                    </div>
-                    <div class="video-details">
-                        <div class="channel-avatar"></div>
-                        <div class="video-text">
-                            <h3 class="video-title">Why CSS Grid is Awesome</h3>
-                            <p class="channel-name">Design UI</p>
-                            <p class="video-stats">89K views • 3 days ago</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="video-card">
+                    <img src="https://picsum.photos/seed/3/300/200" class="thumbnail" alt="Thumb">
+                    <div class="video-title">How to Cook Pizza</div>
+                    <div class="video-meta">Chef Life • 85K views</div>
+                </a>
 
-                <div class="video-card">
-                    <div class="thumbnail-container">
-                        <img src="https://via.placeholder.com/360x200/1e1e1e/ffffff?text=Video+Thumbnail" alt="Thumbnail" class="thumbnail">
-                        <span class="duration">5:10</span>
-                    </div>
-                    <div class="video-details">
-                        <div class="channel-avatar"></div>
-                        <div class="video-text">
-                            <h3 class="video-title">Flexbox vs Grid - Quick Comparison</h3>
-                            <p class="channel-name">Tech Bites</p>
-                            <p class="video-stats">612K views • 1 month ago</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="video-card">
+                    <img src="https://picsum.photos/seed/4/300/200" class="thumbnail" alt="Thumb">
+                    <div class="video-title">Deep Cave Exploration</div>
+                    <div class="video-meta">Nature TV • 120K views</div>
+                </a>
 
             </div>
         </main>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        :root {
+            --bg-color: #60ee77;          
+            --card-bg: #f3baba;          
+            --primary-color: #f70404;     
+            --text-dark: #0d6106;        
+            --text-light: #1e81a5;       
+            --border-color: #0c0b0b;     
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            gap: 25px; 
+            min-height: 100vh;
+        }
+
+        .menu-container {
+            background-color: var(--card-bg);
+            max-width: 550px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 2px solid var(--border-color);
+        }
+
+        .restaurant-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 0px dashed var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        .restaurant-header h1 {
+            color: var(--primary-color);
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .menu-section {
+            margin-bottom: 0; 
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-desc {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-top: 12px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+    <div >
+        <header class="restaurant-header">
+            <h1>PIZZA HUT</h1>
+        </header>
+    </div>
+
+    <div class="menu-container">
+        <section class="menu-section">
+            <h2 class="section-title">Pizza</h2>
+            <p class="section-desc">Hand-tossed crust made fresh daily, topped with artisanal sauces, premium mozzarella cheese, and the finest hand-picked ingredients baked to bubbling perfection.</p>
+        </section>
+    </div>
+
+    <div class="menu-container">
+        <section class="menu-section">
+            <h2 class="section-title">Soft Drinks</h2>
+            <p class="section-desc">Chilled, fizzy, and incredibly refreshing beverages specially curated to complement your hot meals and elevate your dining experience.</p>
+        </section>
+    </div>
+
+    <div class="menu-container">
+        <section class="menu-section">
+            <h2 class="section-title">Burgers</h2>
+            <p class="section-desc">Juicy, flavorful patties grilled to perfection, layered with fresh crunchy lettuce, ripe tomatoes, melted cheese, and our signature secret house sauce.</p>
+        </section>
+    </div>
+    </div>
+
+</body>
+</html>
