@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flavor Garden - Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f0e6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-card {
+            max-width: 750px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #d35400;
+            padding-bottom: 20px;
+        }
+
+        .menu-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        .menu-header p {
+            color: #e67e22;
+            font-style: italic;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        .menu-section-title {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .menu-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .dish-card {
+            position: relative; 
+            flex: 1 1 calc(50% - 15px); 
+            background-color: #faf8f5;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s;
+            border-left: 5px solid #2ecc71;
+        }
+
+        .dish-card.non-veg {
+            border-left-color: #e74c3c; 
+        }
+
+        .dish-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            background-color: #e67e22;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .dish-header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            margin-bottom: 8px;
+            margin-top: 5px;
+        }
+
+        .dish-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        .dish-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #d35400;
+        }
+
+        .dish-desc {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .menu-items-container {
+                flex-direction: column;
+            }
+            .dish-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-card">
+        
+        <div class="menu-header">
+            <h1>THE FLAVOR GARDEN</h1>
+            <p>~ Fresh Ingredients, Premium Taste ~</p>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="menu-section-title">Starters & Main Course</h2>
+            
+            <div class="menu-items-container">
+                
+                <div class="dish-card">
+                    <span class="badge">Bestseller</span>
+                    <div class="dish-header">
+                        <span class="dish-name">Paneer Tikka Grill</span>
+                        <span class="dish-price">₹280</span>
+                    </div>
+                    <p class="dish-desc">Cottage cheese cubes marinated in spices and grilled in a clay oven with bell peppers.</p>
+                </div>
+
+                <div class="dish-card non-veg">
+                    <span class="badge" style="background-color: #9b59b6;">New</span>
+                    <div class="dish-header">
+                        <span class="dish-name">Crispy Chicken Wings</span>
+                        <span class="dish-price">₹340</span>
+                    </div>
+                    <p class="dish-desc">Spicy and crunchy deep-fried chicken wings tossed in rich smoky BBQ sauce.</p>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-header">
+                        <span class="dish-name">Creamy White Pasta</span>
+                        <span class="dish-price">₹250</span>
+                    </div>
+                    <p class="dish-desc">Penne pasta cooked in a rich, velvety Alfredo sauce topped with fresh mushrooms and olives.</p>
+                </div>
+
+                <div class="dish-card non-veg">
+                    <span class="badge" style="background-color: #2980b9;">Popular</span>
+                    <div class="dish-header">
+                        <span class="dish-name">Butter Chicken Rice Box</span>
+                        <span class="dish-price">₹380</span>
+                    </div>
+                    <p class="dish-desc">Classic creamy butter chicken served over a bed of fragrant basmati rice.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
