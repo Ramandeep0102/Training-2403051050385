@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="header">
+            <h1>Admin Dashboard</h1>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>Users</li>
+                    <li>Products</li>
+                    <li>Orders</li>
+                    <li>Analytics</li>
+                    <li>Settings</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-label">Total Users</div>
+                    <div class="stat-number">1,234</div>
+                </div>
+                <div class="stat-box success">
+                    <div class="stat-label">Revenue</div>
+                    <div class="stat-number">$45,672</div>
+                </div>
+                <div class="stat-box warning">
+                    <div class="stat-label">Orders</div>
+                    <div class="stat-number">892</div>
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <div class="card">
+                    <h3>User Activity</h3>
+                    <p>Active users this month</p>
+                    <div class="card-value">542</div>
+                </div>
+                <div class="card">
+                    <h3>Growth Rate</h3>
+                    <p>Monthly growth percentage</p>
+                    <div class="card-value">23%</div>
+                </div>
+                <div class="card">
+                    <h3>Conversion</h3>
+                    <p>Total conversion rate</p>
+                    <div class="card-value">8.5%</div>
+                </div>
+                <div class="card">
+                    <h3>Avg Order Value</h3>
+                    <p>Average order amount</p>
+                    <div class="card-value">$156</div>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Raman</td>
+                            <td>$250</td>
+                            <td>Completed</td>
+                            <td>2026-06-20</td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>Dixit</td>
+                            <td>$180</td>
+                            <td>Pending</td>
+                            <td>2026-06-23</td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>Krish</td>
+                            <td>$320</td>
+                            <td>Completed</td>
+                            <td>2026-06-24</td>
+                        </tr>
+                        <tr>
+                            <td>#1004</td>
+                            <td>Shivam</td>
+                            <td>$95</td>
+                            <td>Shipped</td>
+                            <td>2026-06-25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
